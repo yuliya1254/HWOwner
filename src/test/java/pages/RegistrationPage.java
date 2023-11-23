@@ -1,6 +1,7 @@
 package pages;
 
 import com.codeborne.selenide.SelenideElement;
+import io.qameta.allure.Step;
 import pages.components.CalendarComponent;
 import pages.components.CheckResultComponent;
 
@@ -155,7 +156,7 @@ public class RegistrationPage {
         return this;
     }
 
-
+    @Step("Открыть страницу")
     public RegistrationPage checkModalFormTitle(String value) {
 
         modalFormTitle.shouldHave(text(value));
